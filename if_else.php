@@ -9,17 +9,16 @@ if ($a < $b) {
     echo "$a is less than $b\n";
 } else {
     echo "$a is greater than or equal to $b\n";
+};
+
+
+
+// TODO: Shorten these two if statements to a single if/else
+if ($b < $c) {
+    echo "$b is less than $c\n";
+} else {
+    echo "$b is greater than or equal to $c\n";
 }
-
-
-
-// // TODO: Shorten these two if statements to a single if/else
-// if ($b < $c) {
-//     echo "$b is less than $c\n";
-// }
-// if ($b >= $c) {
-//     echo "$b is greater than or equal to $c\n";
-// }
 
 // // TODO:
 // // combine the next 3 conditionals into one
