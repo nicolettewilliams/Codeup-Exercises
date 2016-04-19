@@ -1,28 +1,31 @@
 <?php
 
-function add($a, $b)
-{
-    return $a + $b;
-}
-function subtract($a, $b)
-{
-    return $a - $b;
-}
-function multiply($a, $b)
-{
-    return $a * $b;
-}
-function divide($a, $b)
-{
-    return $a / $b;
-}
-function modulus($a, $b)
-{
-    return $a % $b;
-}
+$a = 25;
+$b = 5;
 
-echo add(4, 2) . PHP_EOL;
-echo subtract(4, 2) . PHP_EOL;
-echo multiply(4, 2) . PHP_EOL;
-echo divide(4, 2) . PHP_EOL;
-echo modulus(4, 2) . PHP_EOL;
+function add($a, $b) {
+    return $a + $b . PHP_EOL;
+};
+
+function subtract($a, $b) {
+    return $a - $b . PHP_EOL;
+};
+
+function multiply($a, $b) {
+    return $a * $b . PHP_EOL;
+};
+
+function divide($a, $b) {
+    return $a / $b . PHP_EOL;
+};
+
+function modulus($a, $b) {
+    return $a % $b . PHP_EOL;
+};
+
+echo add($a , $b);
+echo subtract($a , $b);
+echo multiply($a , $b);
+echo divide($a , $b);
+echo modulus($a, $b);
+
