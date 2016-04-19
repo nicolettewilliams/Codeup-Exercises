@@ -33,3 +33,23 @@ switch($dayOfWeek) {
         echo "Expected value of 1-7" . PHP_EOL; 
         break;       
  };
+
+if($dayOfWeek == 1){
+    echo "Monday" . PHP_EOL;
+}elseif($dayOfWeek == 2 ){
+    echo "Tuesday" . PHP_EOL;
+}elseif($dayOfWeek == 3 ){
+    echo "Wednesday" . PHP_EOL;
+}elseif($dayOfWeek == 4 ){
+    echo "Thursday" . PHP_EOL;
+}elseif($dayOfWeek == 5 ){
+    echo "Friday" . PHP_EOL;
+}elseif($dayOfWeek == 6 ){
+    echo "Saturday" . PHP_EOL;
+}elseif($dayOfWeek == 7 ){
+    echo "Sunday" . PHP_EOL;
+}else{
+    echo "Expected value of 1-7" . PHP_EOL;
+};
+
+
