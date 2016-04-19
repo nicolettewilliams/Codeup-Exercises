@@ -28,5 +28,5 @@ foreach($books as $key => $book){
             echo "$key: $info" . PHP_EOL;
         }
         echo "--------" . PHP_EOL;
-    }
+    };
 };

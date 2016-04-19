@@ -37,11 +37,11 @@ while ($i <= 100) {
     $FB = '';
 
     if ($i % 3 === 0) {
-        $FB .= 'Fizz';
+        $FB = 'Fizz';
     }
 
     if ($i % 5 === 0) {    
-        $FB .= 'Buzz';        
+        $FB = 'Buzz';        
     }
 
     if (!$FB) {
