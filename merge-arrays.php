@@ -1,13 +1,15 @@
 <?php
 
 function combineArrays($compare, $names){
+    $new = [];
     
     foreach($names as $index => $name) {
-        if($names[$index] == $compare[$index]){
-            $new[] = $names[$index];
+        $check = array_shift($compare);
+        if($name == $check){
+            $new[] = $name;
         }else{
-            $new[] = $names[$index];
-            $new[] = $compare[$index];
+            $new[] = $name;
+            $new[] = $check;
         };
     };
     print_r($new). PHP_EOL;
