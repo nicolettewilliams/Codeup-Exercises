@@ -1,23 +1,19 @@
 <?php
-
-fwrite(STDOUT, 'What are you drinking? ');
-$drink = trim(fgets(STDIN));
-$plural = 's';
-
-$number = 99;
-while ($number >= 1) {
-    echo "$number bottle$plural of $drink on the wall,\n";
-    echo "{$number} bottle$plural of $drink!\n";
-    echo "Take one down, pass it around!\n";
-    $number--;
-
-    if ($number - 1 == 1) {
-        $plural = '';
-    };
-
-    if ($number >1) {
-        echo ($number - 1). "bottle$plural of $drink on the wall,";
+for ($i = 99; $i >= 0; $i--) {
+    $bottles = 'bottles';
+    $nextI = $i - 1;
+    if ($i == 1) {
+        $bottles = 'bottle';
+        $nextI = 'no more';
+    }
+    if ($i == 0) $i = 'No more';
+    echo "$i $bottles of beer on the wall, $i $bottles of beer.\n";
+    if ($i > 2) {
+        echo "Take one down and pass it around, $nextI bottles of beer on the wall.\n";
+    } elseif ($i == 2) {
+        echo "Take one down and pass it around, $nextI bottle of beer on the wall.\n";
     } else {
-        echo "No more bottles of $drink on the wall!\n";
-    };
-};
+        echo "Go to the store and buy some more, 99 bottles of beer on the wall.\n";
+        break;
+    }
+}

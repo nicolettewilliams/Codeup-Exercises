@@ -1,0 +1,6 @@
+
+2016-05-02 15:21:35 [INFO] hi
+2016-05-02 15:21:43 [INFO] hi
+2016-05-02 15:21:43 [INFO] This is an info message.
+2016-05-02 15:21:43 [ERROR] This is an error message.
+2016-05-02 15:21:43 [WARNING] this is a warning

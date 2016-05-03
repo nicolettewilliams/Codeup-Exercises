@@ -1,5 +1,8 @@
 <?php
 
+$names = ['Tina', 'Dana', 'Mike', 'Amy', 'Adam'];
+$compare = ['Tina', 'Dean', 'Mel', 'Amy', 'Michael'];
+
 function combineArrays($compare, $names){
     $new = [];
     
@@ -15,6 +18,4 @@ function combineArrays($compare, $names){
     print_r($new). PHP_EOL;
 };
 
-$names = ['Tina', 'Dana', 'Mike', 'Amy', 'Adam'];
-$compare = ['Tina', 'Dean', 'Mel', 'Amy', 'Michael'];
 combineArrays($compare, $names);
