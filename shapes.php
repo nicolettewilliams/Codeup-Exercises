@@ -1,11 +1,10 @@
 <?php
 
-require_once 'rectangle.php';
-require_once 'square.php';
+require_once 'Rectangle.php';
+require_once 'Square.php';
 
-$rectangle = new Rectangle(5,2);
-var_dump($rectangle->area());
+$rectangle = new Rectangle(5, 8);
+echo 'rectangle area: ' . $rectangle->area() . PHP_EOL;
 
-$square = new Square(10);
-var_dump($square->area());
-var_dump($square->perimeter());
+$square = new Square(4);
+echo 'square perimeter: ' . $square->perimeter() . PHP_EOL;

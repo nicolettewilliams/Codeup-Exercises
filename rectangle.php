@@ -1,32 +1,29 @@
 <?php
 
-class Rectangle {
-
-    public $width;
-    public $height;
-
-    public function __construct($height, $width) 
+class Rectangle
+{
+    private $width;
+    private $height;
+    public function __construct($width, $height)
     {
-        $this->height = $height;
         $this->width = $width;
+        $this->height  = $height;
     }
-
+    public function perimeter(){
+        $perimeter = ($this->getHeight() * 2) + ($this->getWidth() *2);
+    }
+    
     public function area()
     {
-        return $this->height*$this->width;
+       $area = $this->getWidth() * $this->getHeight();
+       return $area;
+    }
+    public function getHeight()
+    {
+        return $this->height;
+    }
+    public function getWidth()
+    {
+        return $this->width;
     }
 }
-
-
-// Method to determine if the rectangle
-// is also a square.
-function isSquare() {
-    if ($this->width == $this->height) {
-        return true; // Square
-    } else {
-       return false; 
-    }
-}
-
-
-   
