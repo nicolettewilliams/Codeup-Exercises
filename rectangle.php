@@ -2,28 +2,35 @@
 
 class Rectangle
 {
-    private $width;
     private $height;
-    public function __construct($width, $height)
+    private $width;
+    public function __construct($height, $width)
+    {
+        $this->setHeight($height);
+        $this->setWidth($width);
+    }
+    protected function setWidth($width)
     {
         $this->width = $width;
-        $this->height  = $height;
     }
-    public function perimeter(){
-        $perimeter = ($this->getHeight() * 2) + ($this->getWidth() *2);
-    }
-    
-    public function area()
+    protected function setHeight($height)
     {
-       $area = $this->getWidth() * $this->getHeight();
-       return $area;
+        $this->height = $height;
     }
-    public function getHeight()
+    protected function getHeight()
     {
         return $this->height;
     }
-    public function getWidth()
+    protected function getWidth()
     {
         return $this->width;
+    }
+    public function area()
+    {
+        return $this->getHeight() * $this->getWidth();
+    }
+    public function perimeter()
+    {
+        return (2 * $this->getHeight()) + (2 * $this->getWidth());
     }
 }

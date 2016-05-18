@@ -1,50 +1,38 @@
 <?php
 
-class Log{
-    protected $filename;
-    protected $handle;
+class Log 
+{
+    private $filename;
+    private $handle;
     public function __construct($prefix = 'log')
-     {
-        $this->setFilename($prefix);
-        //pointer assigned to $handle
-        $this->handle = fopen($this->getFilename(), 'a');
-     }
-
-    protected function setFilename($prefix)
     {
-        $date = date("Y-m-d");
-        if(is_string($prefix)){
-        $this->filename = trim($prefix) . "-{$date}.log";
-        }else{
+        $filename = "{$prefix}-" . date('Y-m-d') . '.log';
+        $this->setFilename($filename);
+        $this->handle = fopen($this->filename, 'a');
+    }
+    private function setFilename($filename)
+    {
+        if (!is_string($filename)){
+            echo "Filename must be a string!";
             die();
         }
+        $this->filename = $filename;
     }
-
-    public function getFilename()
+    public function logMessage($level, $message) 
     {
-        return $this->filename;
+        $logEntry = PHP_EOL . date('Y-m-d H:i:s') . " [{$level}] {$message}";
+        fwrite($this->handle, $logEntry);
     }
-
-    public function logMessage($logLevel, $message)
+    public function info($message) 
     {
-        $date = date("Y-m-d");
-        $time = date("h:i:sa");
-        $log = "$date $time";
-        fwrite($this->handle, PHP_EOL . "$log $logLevel: $message");
+        $this->logMessage('INFO', $message);
     }
-
-    public function info($message){
-        $this->logMessage("INFO", $message);
+    public function error($message)
+    {
+        $this->logMessage('ERROR', $message);
     }
-
-    public function error($message){
-        $this->logMessage("ERROR", $message);
-    }
-    
     public function __destruct()
     {
-        if(isset($this->handle)){
-            fclose($this->handle);
-        }
+        fclose($this->handle);
     }
 }
