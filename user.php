@@ -2,5 +2,5 @@
 
 class User extends Model
 {
-    public static $table = 'users';
+    protected static $table = 'users';
 }
